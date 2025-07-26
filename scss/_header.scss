@@ -282,6 +282,33 @@
     }
   }
 
+  &__button-basket {
+    svg {
+      transition: transform 0.3s ease, fill 0.3s ease;
+      transform-origin: center;
+    }
+
+    &:hover svg,
+    &:focus svg {
+      transform: scale(1.1) rotate(-10deg);
+    }
+  }
+
+  &__has-items {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      width: 8px;
+      height: 8px;
+      background-color: variables.$blue-main;
+      border-radius: 50%;
+    }
+  }
+
   &__icon {
     fill: transparent;
     stroke: variables.$black;
@@ -512,7 +539,7 @@
       display: none;
       gap: 8px;
 
-      position: fixed;
+      position: absolute;
       top: 150px;
       left: 50%;
       transform: translateX(-50%);

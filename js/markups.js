@@ -185,3 +185,33 @@ export function generateMarkupCatalogGrid(list) {
 
   return markupCatalogGrid;
 }
+
+export function generateMarkupBasketList(list) {
+  return list
+    .map(({ id, name, price, discountPrice, image, quantity }) => {
+      return ` <li class="basket__item" data-id="${id}">
+            <img
+              src="${image}"
+              alt="${name}"
+              class="basket__item-img"
+            />
+            <div class="basket__item-wrap">
+              <h4 class="basket__item-name">
+               ${name}
+              </h4>
+              <p class="basket__item-info">
+                <span class="basket__item-count"> ${quantity}</span> szt. x
+                <span class="basket__item-price">${
+                  discountPrice !== null ? discountPrice : price
+                }</span> zł
+              </p>
+            </div>
+            <button type="button" class="basket__item-trash">
+              <svg>
+                <use href="./images/sprite.svg#trash"></use>
+              </svg>
+            </button>
+          </li>`;
+    })
+    .join("");
+}
