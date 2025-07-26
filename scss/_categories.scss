@@ -1,0 +1,105 @@
+@use "variables";
+
+.categories {
+  padding: 40px 0;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+  }
+
+  &__item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  &__wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(168, 168, 168, 0.45) 0%,
+        rgba(45, 45, 45, 0.55) 100%
+      );
+      z-index: 1;
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    z-index: 2;
+
+    font-weight: 900;
+    font-size: 24px;
+    background: linear-gradient(179deg, #fff 0%, #dedede 100%);
+    background-clip: text;
+    text-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @media (min-width: variables.$breakpoint-xl) {
+    padding: 60px 0 40px;
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    &__item {
+      display: flex;
+      height: 250px;
+
+      &--large-vertical {
+        grid-row: span 2;
+        height: 430px;
+      }
+
+      &:hover .categories__wrap {
+        opacity: 1;
+      }
+    }
+
+    &__link {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__wrap {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &__img {
+      flex: 1;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}

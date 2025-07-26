@@ -28,6 +28,10 @@
       opacity: 0.7;
       z-index: 1;
     }
+
+    & picture {
+      width: 100%;
+    }
   }
 
   &__img {
@@ -186,12 +190,11 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -30px;
+  bottom: -36px;
 
   display: flex !important;
   justify-content: center;
   gap: 26px;
-  margin-top: 24px;
   list-style: none;
 }
 
@@ -227,6 +230,6 @@
 
 @media (min-width: variables.$breakpoint-xl) {
   .slick-dots {
-    bottom: -40px;
+    bottom: -27px;
   }
 }

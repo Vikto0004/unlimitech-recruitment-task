@@ -130,13 +130,14 @@
             <div class="hero__item">
               <picture>
                 <source
-                  srcset="./images/banner-desktop.jpg"
-                  media="(min-width: 1200px)"
+                  media="(max-width: 768px)"
+                  srcset="https://picsum.photos/400/600?random=1"
                 />
                 <img
-                  src="./images/banner-mobil.jpg"
+                  src="https://picsum.photos/1400/600?random=1"
                   alt="banner"
                   class="hero__img"
+                  loading="lazy"
                 />
               </picture>
               <div class="hero__item-wrapper">
@@ -148,22 +149,24 @@
                     aperiam, eaque ipsa quae ab.
                   </p>
                 </div>
-                <a href="#" class="hero__link">Zobacz więcej</a>
+                <a href="#categories" class="hero__link">Zobacz więcej</a>
               </div>
             </div>
 
             <div class="hero__item">
               <picture>
                 <source
-                  srcset="./images/banner-desktop.jpg"
-                  media="(min-width: 1200px)"
+                  media="(max-width: 768px)"
+                  srcset="https://picsum.photos/400/600?random=2"
                 />
                 <img
-                  src="./images/banner-mobil.jpg"
+                  src="https://picsum.photos/1400/600?random=2"
                   alt="banner"
                   class="hero__img"
+                  loading="lazy"
                 />
               </picture>
+
               <div class="hero__item-wrapper">
                 <div class="hero__item-wrap">
                   <h2 class="hero__title">Nowa kolekcja</h2>
@@ -180,13 +183,14 @@
             <div class="hero__item">
               <picture>
                 <source
-                  srcset="./images/banner-desktop.jpg"
-                  media="(min-width: 1200px)"
+                  media="(max-width: 768px)"
+                  srcset="https://picsum.photos/400/600?random=3"
                 />
                 <img
-                  src="./images/banner-mobil.jpg"
+                  src="https://picsum.photos/1400/600?random=3"
                   alt="banner"
                   class="hero__img"
+                  loading="lazy"
                 />
               </picture>
               <div class="hero__item-wrapper">
@@ -214,6 +218,117 @@
               </svg>
             </button>
           </div>
+        </div>
+      </section>
+
+      <section class="categories" id="categories">
+        <div class="container">
+          <ul class="categories__list">
+            <li class="categories__item categories__item--large-vertical">
+              <a href="./" class="categories__link">
+                <img
+                  src="https://picsum.photos/350/450?random=4"
+                  alt="Kategorie"
+                  class="categories__img"
+                  loading="lazy"
+                />
+                <div class="categories__wrap">
+                  <h3 class="categories__subtitle">Baleriny</h3>
+                </div>
+              </a>
+            </li>
+            <li class="categories__item">
+              <a href="./" class="categories__link">
+                <img
+                  src="https://picsum.photos/350/450?random=5"
+                  alt="Kategorie"
+                  class="categories__img"
+                  loading="lazy"
+                />
+                <div class="categories__wrap">
+                  <h3 class="categories__subtitle">Jazzówki</h3>
+                </div>
+              </a>
+            </li>
+            <li class="categories__item categories__item--large-vertical">
+              <a href="./" class="categories__link">
+                <img
+                  src="https://picsum.photos/350/450?random=6"
+                  alt="Kategorie"
+                  class="categories__img"
+                  loading="lazy"
+                />
+                <div class="categories__wrap">
+                  <h3 class="categories__subtitle">Mokasyny</h3>
+                </div>
+              </a>
+            </li>
+            <li class="categories__item">
+              <a href="./" class="categories__link">
+                <img
+                  src="https://picsum.photos/350/450?random=7"
+                  alt="Kategorie"
+                  class="categories__img"
+                  loading="lazy"
+                />
+                <div class="categories__wrap">
+                  <h3 class="categories__subtitle">Czółenka</h3>
+                </div>
+              </a>
+            </li>
+            <li class="categories__item categories__item--large-vertical">
+              <a href="./" class="categories__link">
+                <img
+                  src="https://picsum.photos/350/450?random=8"
+                  alt="Kategorie"
+                  class="categories__img"
+                  loading="lazy"
+                />
+                <div class="categories__wrap">
+                  <h3 class="categories__subtitle">Sandały</h3>
+                </div>
+              </a>
+            </li>
+            <li class="categories__item categories__item--large-vertical">
+              <a href="./" class="categories__link">
+                <img
+                  src="https://picsum.photos/350/450?random=9"
+                  alt="Kategorie"
+                  class="categories__img"
+                  loading="lazy"
+                />
+                <div class="categories__wrap">
+                  <h3 class="categories__subtitle">Kozaki</h3>
+                </div>
+              </a>
+            </li>
+            <li class="categories__item">
+              <a href="./" class="categories__link">
+                <img
+                  src="https://picsum.photos/350/450?random=9"
+                  alt="Kategorie"
+                  class="categories__img"
+                  loading="lazy"
+                />
+                <div class="categories__wrap">
+                  <h3 class="categories__subtitle">Półbuty</h3>
+                </div>
+              </a>
+            </li>
+            <li class="categories__item">
+              <a href="./" class="categories__link">
+                <img
+                  src="https://picsum.photos/350/450?random=10"
+                  alt="Kategorie"
+                  class="categories__img"
+                  loading="lazy"
+                />
+                <div class="categories__wrap">
+                  <h3 class="categories__subtitle">Wyprzedaż</h3>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
@@ -316,8 +431,8 @@
       <div class="catalog__wrapper">
         <ul class="catalog__grid"></ul>
         <img
-          src="./images/catalog-img.jpg"
-          alt="catalog img"
+          src="https://picsum.photos/400/520?random=11"
+          alt="catalog"
           class="catalog__img"
         />
       </div>

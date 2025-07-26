@@ -1,5 +1,9 @@
 @use "variables";
 
+body:has(.mobile-menu--active) {
+  overflow: hidden;
+}
+
 .info-strip {
   display: flex;
   justify-content: center;
@@ -330,6 +334,7 @@
     background-color: #fff;
     overflow: auto;
     transition: left 0.3s ease;
+    z-index: 10;
 
     &--active {
       left: 0;
