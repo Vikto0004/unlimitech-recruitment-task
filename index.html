@@ -10,11 +10,240 @@
       href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <header></header>
+    <header class="header">
+      <div class="info-strip">
+        <div class="info-strip__item">
+          <svg class="info-strip__icon">
+            <use href="./images/sprite.svg#phone"></use>
+          </svg>
+          <p class="info-strip__text">(+48) 000 000 000</p>
+        </div>
+        <div class="info-strip__item">
+          <svg class="info-strip__icon">
+            <use href="./images/sprite.svg#edit"></use>
+          </svg>
+          <p class="info-strip__text">Napisz do nas!</p>
+        </div>
+        <div class="info-strip__item">
+          <svg class="info-strip__icon">
+            <use href="./images/sprite.svg#shipping-fast"></use>
+          </svg>
+          <p class="info-strip__text">Darmowa dostawa</p>
+        </div>
+        <div class="info-strip__item">
+          <svg class="info-strip__icon">
+            <use href="./images/sprite.svg#restock"></use>
+          </svg>
+          <p class="info-strip__text">30 Dni na darmowy zwrot</p>
+        </div>
+      </div>
+      <div class="container header__wrapper">
+        <a class="header-logo" href="./">
+          <svg class="header-logo__icon">
+            <use href="./images/logo.svg"></use>
+          </svg>
+        </a>
+        <nav class="header-nav">
+          <ul class="header-nav__list">
+            <li class="header-nav__item">
+              <button class="header-nav__btn-catalog">
+                Damskie buty skórzane
+                <svg>
+                  <use href="./images/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="header-nav__item">
+              <a href="./" class="header-nav__link">Bony podarunkowe</a>
+            </li>
+            <li class="header-nav__item">
+              <a href="./" class="header-nav__link">Nowości</a>
+            </li>
+            <li class="header-nav__item">
+              <a href="./" class="header-nav__link">Bestsellery</a>
+            </li>
+            <li class="header-nav__item">
+              <a href="./" class="header-nav__link header-nav__link--sale"
+                >Wyprzedaż</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="header-search">
+          <input
+            type="text"
+            name="search"
+            class="header-search__input"
+            placeholder="Wyszukaj"
+          />
+          <button class="header-search__button">
+            <svg class="header-search__icon">
+              <use href="./images/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+        <ul class="header-bar">
+          <li class="header-bar__item">
+            <button class="header-bar__button">
+              <svg class="header-bar__icon">
+                <use href="./images/sprite.svg#user"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="header-bar__item">
+            <button class="header-bar__button">
+              <svg class="header-bar__icon">
+                <use href="./images/sprite.svg#favorite"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="header-bar__item">
+            <button class="header-bar__button">
+              <svg class="header-bar__icon">
+                <use href="./images/sprite.svg#basket"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="header-bar__item header-bar__burger mobile-menu__open">
+            <button class="header-bar__button">
+              <svg class="header-bar__icon">
+                <use href="./images/sprite.svg#burger"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </header>
+
     <main></main>
+
     <footer></footer>
+
+    <div class="mobile-menu">
+      <div class="mobile-menu__wrap">
+        <h3 class="mobile-menu__subtitle">Menu</h3>
+        <button class="mobile-menu__close">
+          <svg>
+            <use href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <nav class="menu-nav">
+        <ul class="menu-nav__list">
+          <li class="menu-nav__item">
+            <button
+              class="menu-nav__link menu-nav__link--category"
+              data-slug="damskie-buty-skorzane"
+            >
+              Damskie buty skórzane
+              <svg class="menu-nav__arrow-icon">
+                <use href="./images/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="menu-nav__item">
+            <a href="./" class="menu-nav__link">Bony podarunkowe</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="./" class="menu-nav__link">Nowości</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="./" class="menu-nav__link">Bestsellery</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="./" class="menu-nav__link menu-nav__link--sale"
+              >% Wyprzedaż %</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <ul class="menu-user">
+        <li class="menu-user__item">
+          <a href="./" class="menu-user__link">Zaloguj / Zarejestruj</a>
+        </li>
+        <li class="menu-user__item">
+          <a href="./" class="menu-user__link">Schowek</a>
+        </li>
+        <li class="menu-user__item">
+          <a href="./" class="menu-user__link">Koszyk</a>
+        </li>
+      </ul>
+      <div class="menu-wrapper">
+        <ul class="menu-wrapper__contact">
+          <li class="menu-wrapper__contact-item">
+            <svg class="menu-wrapper__contact-icon">
+              <use href="./images/sprite.svg#phone"></use>
+            </svg>
+            <p class="menu-wrapper__contact-text">(+48) 000 000 000</p>
+          </li>
+          <li class="menu-wrapper__contact-item">
+            <svg class="menu-wrapper__contact-icon">
+              <use href="./images/sprite.svg#edit"></use>
+            </svg>
+            <p class="menu-wrapper__contact-text">sklep@kontakt.com.pl</p>
+          </li>
+        </ul>
+        <div class="menu-wrapper__line"></div>
+        <ul class="menu-wrapper__social">
+          <li class="menu-wrapper__social-item">
+            <a href="./" class="menu-wrapper__social-link">
+              <svg class="menu-wrapper__social-icon">
+                <use href="./images/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="menu-wrapper__social-item">
+            <a href="./" class="menu-wrapper__social-link">
+              <svg class="menu-wrapper__social-icon">
+                <use href="./images/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="menu-wrapper__social-item">
+            <a href="./" class="menu-wrapper__social-link">
+              <svg class="menu-wrapper__social-icon">
+                <use href="./images/sprite.svg#tik-tok"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="catalog">
+      <ul class="catalog__list"></ul>
+      <div class="catalog__wrapper">
+        <ul class="catalog__grid"></ul>
+        <img
+          src="./images/catalog-img.jpg"
+          alt="catalog img"
+          class="catalog__img"
+        />
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="./js/slick.js"></script>
+    <script type="module" src="./js/menu-mobile.js"></script>
+    <script type="module" src="./js/catalog.js"></script>
   </body>
 </html>

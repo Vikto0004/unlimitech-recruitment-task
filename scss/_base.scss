@@ -5,7 +5,7 @@ body {
   width: 100%;
   font-family: variables.$font-family;
   color: variables.$black;
-  background-color: variables.$gray-background;
+  background-color: #fff;
   overflow-x: hidden;
 }
 
@@ -38,4 +38,15 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.container {
+  padding: 0 16px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: variables.$breakpoint-md) {
+    max-width: 1440px;
+    padding: 0 30px;
+  }
 }
