@@ -47,7 +47,7 @@ body:has(.basket--open) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 28px 60px 0;
+    padding: 28px 30px 0;
     margin-bottom: 30px;
   }
 
@@ -94,7 +94,7 @@ body:has(.basket--open) {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: 0 60px 24px;
+    padding: 0 30px 24px;
     overflow-y: auto;
   }
 
@@ -180,7 +180,7 @@ body:has(.basket--open) {
 
   &__wrapper {
     margin-top: auto;
-    padding: 32px 60px;
+    padding: 32px 30px;
     border-top: 1px solid variables.$gray-stroke;
     background-color: variables.$gray-background;
   }
@@ -297,5 +297,19 @@ body:has(.basket--open) {
     font-size: 15px;
     line-height: 120%;
     color: #595959;
+  }
+
+  @media (min-width: variables.$breakpoint-xl) {
+    &__wrap {
+      padding: 28px 60px 0;
+    }
+
+    &__list {
+      padding: 0 60px 24px;
+    }
+
+    &__wrapper {
+      padding: 32px 60px;
+    }
   }
 }

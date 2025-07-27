@@ -54,14 +54,14 @@ export function initProductFiltersSlider() {
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 3.35,
           dots: false,
         },
       },
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 2.35,
           dots: false,
         },
       },

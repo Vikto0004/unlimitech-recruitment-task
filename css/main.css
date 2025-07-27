@@ -988,7 +988,7 @@ body:has(.basket--open) {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 28px 60px 0;
+  padding: 28px 30px 0;
   margin-bottom: 30px;
 }
 .basket__subtitle {
@@ -1028,7 +1028,7 @@ body:has(.basket--open) {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 0 60px 24px;
+  padding: 0 30px 24px;
   overflow-y: auto;
 }
 .basket__item {
@@ -1103,7 +1103,7 @@ body:has(.basket--open) {
 }
 .basket__wrapper {
   margin-top: auto;
-  padding: 32px 60px;
+  padding: 32px 30px;
   border-top: 1px solid #e3e3e3;
   background-color: #f6f6f6;
 }
@@ -1203,6 +1203,17 @@ body:has(.basket--open) {
   font-size: 15px;
   line-height: 120%;
   color: #595959;
+}
+@media (min-width: 1200px) {
+  .basket__wrap {
+    padding: 28px 60px 0;
+  }
+  .basket__list {
+    padding: 0 60px 24px;
+  }
+  .basket__wrapper {
+    padding: 32px 60px;
+  }
 }
 
 .hero {
@@ -1852,6 +1863,253 @@ body:has(.basket--open) {
   }
   .product-filters .slick-dots {
     bottom: -40px;
+  }
+}
+
+.subscription {
+  padding: 25px 0 16px;
+}
+.subscription__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-radius: 16px;
+  background-color: #0068ff;
+  padding: 48px 20px 40px;
+}
+.subscription__illustration {
+  display: none;
+}
+.subscription__title {
+  font-weight: 800;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.subscription__title span {
+  font-weight: 900;
+  font-size: 24px;
+}
+.subscription__descr {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 169%;
+  color: #fff;
+}
+.subscription__form {
+  position: relative;
+}
+.subscription__input-group {
+  margin-bottom: 18px;
+  position: relative;
+}
+.subscription__input {
+  border-radius: 100px;
+  border: 1px solid #e9e9e9;
+  background: #fff;
+  width: 100%;
+  padding: 16px 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 157%;
+  color: #6b6b6b;
+  outline: none;
+  transition: border 0.3s ease;
+}
+.subscription__input:hover, .subscription__input:focus {
+  border: 1px solid #0051cc;
+}
+.subscription__btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  background-color: #292929;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+}
+.subscription__btn svg {
+  width: 36px;
+  height: 36px;
+  fill: #fff;
+}
+.subscription__check {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.subscription__check-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.subscription__check-label {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #fff;
+}
+.subscription__check-label a {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+.subscription__check-label a:not(:last-child) {
+  margin: 0 4px;
+}
+.subscription__check-label a:last-child {
+  margin-left: 4px;
+}
+.subscription__check-label a:active {
+  color: #292929;
+}
+.subscription__check-span {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  padding: 2px;
+  fill: transparent;
+  background-color: #fff;
+  transition: fill 0.2s ease;
+  margin-right: 8px;
+}
+.subscription__check-span svg {
+  width: 12px;
+  height: 12px;
+}
+.subscription__check-input:checked + .subscription__check-label span {
+  fill: #0068ff;
+}
+.subscription__notification {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  align-items: center;
+  gap: 4px;
+  background: #ffecec;
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+.subscription__notification--email {
+  display: flex;
+  top: -37px;
+}
+.subscription__notification--check {
+  display: flex;
+  bottom: -37px;
+}
+.subscription__notification-polygon {
+  position: absolute;
+  left: 50%;
+  width: 14px;
+  height: 11px;
+  fill: #ffecec;
+}
+.subscription__notification--email .subscription__notification-polygon {
+  bottom: -8px;
+  transform: translateX(-50%);
+}
+.subscription__notification--check .subscription__notification-polygon {
+  top: -8px;
+  transform: translateX(-50%) rotate(180deg);
+}
+.subscription__notification-icon {
+  width: 14px;
+  height: 14px;
+  fill: #c82020;
+}
+.subscription__notification-descr {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #c82020;
+  white-space: nowrap;
+}
+@media (min-width: 1200px) {
+  .subscription {
+    padding: 94px 0 24px;
+  }
+  .subscription__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 42px 98px 44px 208px;
+    position: relative;
+    overflow: hidden;
+  }
+  .subscription__illustration {
+    position: absolute;
+    left: 60px;
+    top: 0;
+    display: block;
+    fill: #fff;
+    stroke-width: 0.4px;
+    stroke: #fff;
+    aspect-ratio: 1/1;
+    width: 160px;
+  }
+  .subscription__info {
+    max-width: 550px;
+  }
+  .subscription__title {
+    font-weight: 800;
+    font-size: 24px;
+    margin: 0;
+  }
+  .subscription__title span {
+    font-size: 28px;
+  }
+  .subscription__descr {
+    font-weight: 500;
+    line-height: 138%;
+  }
+  .subscription__input-group {
+    margin-bottom: 7px;
+  }
+  .subscription__input {
+    max-width: 340px;
+    padding: 12px 21px;
+  }
+  .subscription__btn {
+    top: 3px;
+    right: 3px;
+    transition: background-color 0.3s ease;
+  }
+  .subscription__btn svg {
+    width: 32px;
+    height: 32px;
+    transition: fill 0.3s ease;
+  }
+  .subscription__btn:hover, .subscription__btn:focus {
+    background-color: #e3e3e3;
+  }
+  .subscription__btn:hover svg, .subscription__btn:focus svg {
+    fill: #292929;
+  }
+  .subscription__check {
+    padding-left: 6px;
+  }
+  .subscription__check-label {
+    align-items: flex-start;
+    cursor: pointer;
+  }
+  .subscription__check-label a:hover, .subscription__check-label a:focus {
+    color: #292929;
   }
 }
 

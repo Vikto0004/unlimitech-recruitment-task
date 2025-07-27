@@ -62,7 +62,9 @@
               </button>
             </li>
             <li class="header-nav__item">
-              <a href="./" class="header-nav__link">Bony podarunkowe</a>
+              <a href="#subscription" class="header-nav__link"
+                >Bony podarunkowe</a
+              >
             </li>
             <li class="header-nav__item">
               <a href="./" class="header-nav__link">Nowości</a>
@@ -385,6 +387,68 @@
           <div class="product-filters__notification"></div>
         </div>
       </section>
+
+      <section class="subscription" id="subscription">
+        <div class="container">
+          <div class="subscription__wrapper">
+            <svg class="subscription__illustration">
+              <use href="./images/sprite.svg#illustration"></use>
+            </svg>
+            <div class="subscription__info">
+              <h2 class="subscription__title">
+                Chcesz otrzymać <span>5%</span> zniżki na swoje zakupy?
+              </h2>
+              <p class="subscription__descr">
+                Zapisz się do naszego newslettera i jako pierwsza dowiedz się o
+                nowościach, promocjach i ofertach specjalnych!
+              </p>
+            </div>
+            <form class="subscription__form">
+              <div class="subscription__input-group">
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="Twój adres email"
+                  class="subscription__input"
+                  autocomplete="email"
+                />
+                <button type="submit" class="subscription__btn">
+                  <svg>
+                    <use href="./images/sprite.svg#arrow-up-right"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="subscription__check">
+                <input
+                  class="subscription__check-input"
+                  type="checkbox"
+                  id="accept"
+                />
+                <label class="subscription__check-label" for="accept">
+                  <span class="subscription__check-span">
+                    <svg>
+                      <use href="./images/sprite.svg#checkmark"></use>
+                    </svg>
+                  </span>
+                  Akceptuję <a href="./">Regulamin</a> i
+                  <a href="./">Politykę Prywatności</a>.</label
+                >
+              </div>
+              <div class="subscription__notification">
+                <svg class="subscription__notification-polygon">
+                  <use href="./images/sprite.svg#polygon"></use>
+                </svg>
+                <svg class="subscription__notification-icon">
+                  <use href="./images/sprite.svg#warning"></use>
+                </svg>
+                <p class="subscription__notification-descr">
+                  Proszę podać prawidłowy adres e-mail.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer></footer>
@@ -412,7 +476,7 @@
             </button>
           </li>
           <li class="menu-nav__item">
-            <a href="./" class="menu-nav__link">Bony podarunkowe</a>
+            <a href="#subscription" class="menu-nav__link">Bony podarunkowe</a>
           </li>
           <li class="menu-nav__item">
             <a href="./" class="menu-nav__link">Nowości</a>
@@ -562,5 +626,6 @@
     <script type="module" src="./js/catalog.js"></script>
     <script type="module" src="./js/basket.js"></script>
     <script type="module" src="./js/product-filters.js"></script>
+    <script type="module" src="./js/subscription.js"></script>
   </body>
 </html>
