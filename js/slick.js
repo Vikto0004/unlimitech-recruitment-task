@@ -40,3 +40,38 @@ $(document).ready(function () {
     nextArrow: $(".hero__slider-next"),
   });
 });
+
+export function initProductFiltersSlider() {
+  $(".product-filters__list").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: true,
+    infinite: false,
+    prevArrow: $(".product-filters__slider-prev"),
+    nextArrow: $(".product-filters__slider-next"),
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1.35,
+          dots: false,
+        },
+      },
+    ],
+  });
+}

@@ -176,7 +176,7 @@
                     aperiam, eaque ipsa quae ab.
                   </p>
                 </div>
-                <a href="#" class="hero__link">Zobacz więcej</a>
+                <a href="#categories" class="hero__link">Zobacz więcej</a>
               </div>
             </div>
 
@@ -202,7 +202,7 @@
                     aperiam, eaque ipsa quae ab.
                   </p>
                 </div>
-                <a href="#" class="hero__link">Zobacz więcej</a>
+                <a href="#categories" class="hero__link">Zobacz więcej</a>
               </div>
             </div>
           </div>
@@ -329,6 +329,60 @@
               </a>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section class="product-filters">
+        <div class="container product-filters__container">
+          <div class="product-filters__wrapper">
+            <ul class="product-filters__wrapper-list">
+              <li class="product-filters__wrapper-item">
+                <button
+                  type="button"
+                  class="product-filters__wrapper-btn product-filters__wrapper-btn--active"
+                  data-tag="sale"
+                >
+                  Promocje
+                </button>
+              </li>
+              <li class="product-filters__wrapper-item">
+                <button
+                  type="button"
+                  class="product-filters__wrapper-btn"
+                  data-tag="new"
+                >
+                  Nowości
+                </button>
+              </li>
+              <li class="product-filters__wrapper-item">
+                <button
+                  type="button"
+                  class="product-filters__wrapper-btn"
+                  data-tag="bestseller"
+                >
+                  Bestsellery
+                </button>
+              </li>
+            </ul>
+            <a href="./" class="product-filters__wrapper-link"
+              >Zobacz wszystkie</a
+            >
+          </div>
+
+          <div class="product-filters__list"></div>
+          <div class="product-filters__slider-nav">
+            <button class="product-filters__slider-prev">
+              <svg>
+                <use href="./images/sprite.svg#arrow-left"></use>
+              </svg>
+            </button>
+            <button class="product-filters__slider-next">
+              <svg>
+                <use href="./images/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="product-filters__notification"></div>
         </div>
       </section>
     </main>
@@ -498,9 +552,15 @@
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
-    <script src="./js/slick.js"></script>
+    <script>
+      document
+        .querySelectorAll("button")
+        .forEach((btn) => btn.addEventListener("click", () => btn.blur()));
+    </script>
+    <script type="module" src="./js/slick.js"></script>
     <script type="module" src="./js/menu-mobile.js"></script>
     <script type="module" src="./js/catalog.js"></script>
     <script type="module" src="./js/basket.js"></script>
+    <script type="module" src="./js/product-filters.js"></script>
   </body>
 </html>

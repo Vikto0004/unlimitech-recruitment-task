@@ -45,22 +45,23 @@ basketOverlay.addEventListener("click", function (e) {
   closeBasket();
 });
 
-function addToCart(productId) {
+export function addToCart(productId) {
   const cart = JSON.parse(localStorage.getItem("cart")) || {
     totalItems: 0,
     items: [],
   };
 
-  const item = cart.items.find((item) => item.id === productId);
+  const item = cart.items.find((item) => item.id === Number(productId));
   if (item) {
     item.quantity += 1;
   } else {
-    cart.items.push({ id: productId, quantity: 1 });
+    cart.items.push({ id: Number(productId), quantity: 1 });
   }
 
   cart.totalItems += 1;
 
   localStorage.setItem("cart", JSON.stringify(cart));
+  checkItemsInBasket();
 }
 
 function removeFromCart(productId) {
@@ -118,18 +119,22 @@ let freeDelivery = false;
 
 function recalculationCartItems() {
   checkFreeDeliveryProgress();
+
   const { items, totalPrice, totalQuantity } = getDetailedCartItems();
 
   basketList.innerHTML = generateMarkupBasketList(items);
   basketCount.innerHTML = `(${totalQuantity} sztuki)`;
 
+  const formattedTotal = Number(totalPrice).toFixed(2);
+  const discountedTotal = (Number(totalPrice) - FREE_DELIVERY).toFixed(2);
+
   if (freeDelivery) {
     basketTotalPriceOrg.style.display = "block";
-    basketTotalPrice.innerHTML = `${Number(totalPrice) - FREE_DELIVERY} zł`;
-    basketTotalPriceOrg.innerHTML = `${totalPrice} zł`;
+    basketTotalPrice.innerHTML = `${discountedTotal} zł`;
+    basketTotalPriceOrg.innerHTML = `${formattedTotal} zł`;
   } else {
     basketTotalPriceOrg.style.display = "none";
-    basketTotalPrice.innerHTML = `${totalPrice} zł`;
+    basketTotalPrice.innerHTML = `${formattedTotal} zł`;
   }
 }
 
@@ -182,5 +187,4 @@ function checkItemsInBasket() {
   }
 }
 
-// addToCart(2);
 checkItemsInBasket();

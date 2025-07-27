@@ -194,6 +194,7 @@ export function generateMarkupBasketList(list) {
               src="${image}"
               alt="${name}"
               class="basket__item-img"
+              loading="lazy"
             />
             <div class="basket__item-wrap">
               <h4 class="basket__item-name">
@@ -214,4 +215,70 @@ export function generateMarkupBasketList(list) {
           </li>`;
     })
     .join("");
+}
+
+export function generateMarkupProductItems(shoes, favorites) {
+  const markupProductItems = shoes
+    .map(({ id, name, price, discountPrice, discountNote, tags, image }) => {
+      return `
+            <div class="product-filters__item" data-id="${id}">
+              <div class="product-filters__wrap">
+                <div class="product-filters__tags">
+                ${tags
+                  .map(
+                    ({ type, text }) =>
+                      `<p class="product-filters__tags-${type}">${text}</p>`
+                  )
+                  .join("")}
+                </div>
+                <div class="product-filters__actions">
+                  <button class="product-filters__favorite ${
+                    favorites.includes(id.toString())
+                      ? `product-filters__favorite--active`
+                      : ""
+                  }" type="button">
+                    <svg>
+                      <use href="./images/sprite.svg#favorite"></use>
+                    </svg></button
+                  ><button class="product-filters__basket" type="button">
+                    <svg>
+                      <use href="./images/sprite.svg#basket"></use>
+                    </svg>
+                  </button>
+                </div>
+                <img
+                  src="${image}"
+                  alt="${name}"
+                  class="product-filters__img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-filters__info">
+                <h3 class="product-filters__subtitle">
+                  ${name}
+                </h3>
+                <p class="product-filters__status">Zapato | Dostępny</p>
+                <p class="product-filters__price">
+                  ${
+                    discountPrice
+                      ? `<span class="product-filters__price--discount">
+                    ${discountPrice}zł</span
+                  >`
+                      : ""
+                  }
+                  <span class="product-filters__price--original">${price}zł</span>
+                </p>
+                ${
+                  discountNote
+                    ? `<p class="product-filters__discount-note">
+              ${discountNote}
+                </p>`
+                    : ""
+                }
+              </div>
+            </div>`;
+    })
+    .join("");
+
+  return markupProductItems;
 }
